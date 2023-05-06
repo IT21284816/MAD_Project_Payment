@@ -14,9 +14,9 @@ import com.google.firebase.database.*
 
 class SaveCardList : AppCompatActivity() {
 
-    private lateinit var empRecyclerView: RecyclerView
+    private lateinit var cardRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
-    private lateinit var empList: ArrayList<PaymentModel>
+    private lateinit var cardList: ArrayList<PaymentModel>
     private lateinit var dbRef: DatabaseReference
 
     private lateinit var searchView: SearchView
@@ -32,12 +32,12 @@ class SaveCardList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_savecard_list)
 
-        empRecyclerView = findViewById(R.id.rvEmp)
-        empRecyclerView.layoutManager = LinearLayoutManager(this)
-        empRecyclerView.setHasFixedSize(true)
+        cardRecyclerView = findViewById(R.id.rvEmp)
+        cardRecyclerView.layoutManager = LinearLayoutManager(this)
+        cardRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
 
-        empList = arrayListOf<PaymentModel>()
+        cardList = arrayListOf<PaymentModel>()
 
         //search
         searchView = findViewById(R.id.searchView)
@@ -60,13 +60,13 @@ class SaveCardList : AppCompatActivity() {
 
     private fun filterList(query: String?) {
         val filteredList = ArrayList<PaymentModel>()
-        for (item in empList) {
+        for (item in cardList) {
             if (item.cardNum?.contains(query.orEmpty(), ignoreCase = true) == true) {
                 filteredList.add(item)
             }
         }
         val mAdapter = PayAdapter(filteredList)
-        empRecyclerView.adapter = mAdapter
+        cardRecyclerView.adapter = mAdapter
 
         mAdapter.setOnItemClickListener(object : PayAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
@@ -89,24 +89,24 @@ class SaveCardList : AppCompatActivity() {
 
     private fun getEmployeesData() {
 
-        empRecyclerView.visibility = View.GONE
+        cardRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
         dbRef = FirebaseDatabase.getInstance().getReference("Payment")
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                empList.clear()
+                cardList.clear()
                 if (snapshot.exists()){
-                    for (empSnap in snapshot.children){
-                        val empData = empSnap.getValue(PaymentModel::class.java)
-                        empList.add(empData!!)
+                    for (cardSnap in snapshot.children){
+                        val cardData = cardSnap.getValue(PaymentModel::class.java)
+                        cardList.add(cardData!!)
                     }
-                    mAdapter = PayAdapter(empList)
-                    empRecyclerView.adapter = mAdapter
+                    mAdapter = PayAdapter(cardList)
+                    cardRecyclerView.adapter = mAdapter
                     setAdapterClickListener()
 
-                    empRecyclerView.visibility = View.VISIBLE
+                    cardRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 }
             }
@@ -125,11 +125,11 @@ class SaveCardList : AppCompatActivity() {
                 val intent = Intent(this@SaveCardList, PayCardDetails::class.java)
 
                 //put extras
-                intent.putExtra("cardId", empList[position].cardId)
-                intent.putExtra("cardNum", empList[position].cardNum)
-                intent.putExtra("expireyDate", empList[position].expireyDate)
-                intent.putExtra("cardCVV", empList[position].cardCVV)
-                intent.putExtra("cardName", empList[position].cardName)
+                intent.putExtra("cardId", cardList[position].cardId)
+                intent.putExtra("cardNum", cardList[position].cardNum)
+                intent.putExtra("expireyDate", cardList[position].expireyDate)
+                intent.putExtra("cardCVV", cardList[position].cardCVV)
+                intent.putExtra("cardName", cardList[position].cardName)
 
                 startActivity(intent)
             }

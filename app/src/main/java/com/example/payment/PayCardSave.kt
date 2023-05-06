@@ -40,11 +40,11 @@ class PayCardSave : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("Payment")
 
         btnSaveData.setOnClickListener {
-            saveEmployeeData()
+            saveCardData()
         }
     }
 
-    private fun saveEmployeeData() {
+    private fun saveCardData() {
 
         //getting values
         val cardNum = inputCardNum.text.toString()

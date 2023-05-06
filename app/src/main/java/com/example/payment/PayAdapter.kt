@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class PayAdapter(private val empList: ArrayList<PaymentModel>) :
+class PayAdapter(private val cardList: ArrayList<PaymentModel>) :
     RecyclerView.Adapter<PayAdapter.ViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
@@ -25,12 +25,12 @@ class PayAdapter(private val empList: ArrayList<PaymentModel>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentEmp = empList[position]
-        holder.txtCardNum.text = currentEmp.cardNum
+        val currentCard = cardList[position]
+        holder.txtCardNum.text = currentCard.cardNum
     }
 
     override fun getItemCount(): Int {
-        return empList.size
+        return cardList.size
     }
 
     class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {

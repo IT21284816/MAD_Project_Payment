@@ -152,8 +152,8 @@ class PayCardDetails : AppCompatActivity() {
 
     ) {
         val dbRef = FirebaseDatabase.getInstance().getReference("Payment").child(id)
-        val empInfo = PaymentModel(id, num, date, cvv,name)
-        dbRef.setValue(empInfo)
+        val cardInfo = PaymentModel(id, num, date, cvv,name)
+        dbRef.setValue(cardInfo)
     }
 
 }
