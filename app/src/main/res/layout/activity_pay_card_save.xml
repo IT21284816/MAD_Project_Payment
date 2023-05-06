@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/purple"
+    tools:context=".PayCardSave">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="367dp"
+        android:layout_height="400dp"
+        android:layout_margin="30dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#ECE6E7"
+            android:transitionGroup="false">
+
+            <TextView
+                android:id="@+id/txt_payment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/txtPayment"
+                android:text="Payment"
+                android:textAlignment="center"
+                android:textColor="#D8D0D0"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/inputCardNum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/inputCardNum"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_edittext"
+                android:backgroundTint="#D8D0D0"
+                android:drawablePadding="8dp"
+                android:hint="@string/inputCardNum"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_payment" />
+
+
+            <EditText
+                android:id="@+id/inputCardName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:backgroundTint="#D8D0D0"
+                android:drawablePadding="8dp"
+                android:hint="@string/inputCardName"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputCardNum" />
+
+            <EditText
+                android:id="@+id/inputExpireyDate"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:backgroundTint="#D8D0D0"
+                android:baselineAligned="false"
+                android:drawablePadding="8dp"
+                android:hint="@string/inputExpieryDate"
+                android:inputType="date"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputCardName" />
+
+            <EditText
+                android:id="@+id/inputCardCVV"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:backgroundTint="#D8D0D0"
+                android:baselineAligned="false"
+                android:drawablePadding="8dp"
+                android:hint="@string/inputCardCVV"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.36"
+                app:layout_constraintStart_toEndOf="@+id/inputExpireyDate"
+                app:layout_constraintTop_toBottomOf="@+id/inputCardName" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/teal_200"
+                android:hint="@string/btnSaveCard"
+                android:text="Save"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputExpireyDate" />
+
+            <ImageView
+                android:id="@+id/img_date"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/inputExpireyDate"
+                app:layout_constraintEnd_toEndOf="@+id/inputExpireyDate"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/inputExpireyDate"
+                app:layout_constraintTop_toTopOf="@+id/inputExpireyDate"
+                app:layout_constraintVertical_bias="0.47"
+                app:srcCompat="@drawable/baseline_date" />
+
+            <ImageView
+                android:id="@+id/img_name"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="250dp"
+                app:layout_constraintBottom_toBottomOf="@+id/inputCardName"
+                app:layout_constraintEnd_toEndOf="@+id/inputCardName"
+                app:layout_constraintStart_toStartOf="@+id/inputCardName"
+                app:layout_constraintTop_toTopOf="@+id/inputCardName"
+                app:srcCompat="@drawable/baseline_supervised_user_circle" />
+
+            <ImageView
+                android:id="@+id/img_cardType"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintBottom_toBottomOf="@+id/inputCardNum"
+                app:layout_constraintEnd_toEndOf="@+id/inputCardNum"
+                app:layout_constraintHorizontal_bias="0.969"
+                app:layout_constraintStart_toStartOf="@+id/inputCardNum"
+                app:layout_constraintTop_toTopOf="@+id/inputCardNum"
+                app:layout_constraintVertical_bias="0.466"
+                app:srcCompat="@drawable/baseline_credit_card" />
+
+            <ImageView
+                android:id="@+id/img_cvv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintBottom_toBottomOf="@+id/inputCardCVV"
+                app:layout_constraintEnd_toEndOf="@+id/inputCardCVV"
+                app:layout_constraintHorizontal_bias="0.921"
+                app:layout_constraintStart_toStartOf="@+id/inputCardCVV"
+                app:layout_constraintTop_toTopOf="@+id/inputCardCVV"
+                app:layout_constraintVertical_bias="0.266"
+                app:srcCompat="@drawable/baseline_key_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

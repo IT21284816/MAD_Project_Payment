@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "195938881366",
+    "project_id": "paymentdb-2a874",
+    "storage_bucket": "paymentdb-2a874.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195938881366:android:075eb3705cc6713c7810f7",
+        "android_client_info": {
+          "package_name": "com.example.payment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195938881366-16ejjqhl40gnp3mm2u9a63umnrh8j18j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLObBdg8qWVWYM118Z0Bj_joPji1sL6Z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195938881366-16ejjqhl40gnp3mm2u9a63umnrh8j18j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CRUD</string>
+    <string name="txtPayment" />
+    <string name="btnSaveCard" />
+    <string name="btnPayNow" />
+    <string name="inputExpieryDate">MM/YY</string>
+    <string name="inputCardCVV">CVV</string>
+    <string name="inputCardNum">Card Number</string>
+    <string name="inputCardName">Name</string>
+    <string name="btnNext" />
+    <string name="txtCardNum" />
+    <string name="txtCardName" />
+    <string name="txtExpiryDate" />
+    <string name="txtCardCVV" />
+    <string name="btnDelete" />
+    <string name="btnEdit" />
+    <string name="btnPay" />
+    <string name="btnDone" />
+    <string name="btnUpdate" />
+    <string name="search" />
+
+
+</resources>
