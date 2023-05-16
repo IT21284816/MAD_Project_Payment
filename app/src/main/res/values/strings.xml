@@ -18,6 +18,7 @@
     <string name="btnDone" />
     <string name="btnUpdate" />
     <string name="search" />
+    <string name="Payment">payment</string>
 
 
 </resources>
