@@ -6,4 +6,4 @@ data class PaymentModel(
     var expireyDate: String? = null,
     var cardCVV: String? = null,
     var cardName: String? = null
-)//
+)
