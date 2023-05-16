@@ -20,7 +20,7 @@ class SaveCardList : AppCompatActivity() {
     private lateinit var dbRef: DatabaseReference
 
     private lateinit var searchView: SearchView
-    private lateinit var mAdapter: PayAdapter
+    private lateinit var mAdapter: PayAdapter//
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
