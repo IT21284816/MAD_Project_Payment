@@ -48,7 +48,7 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/teal_200"
         android:hint="@string/btnUpdate"
-        android:text="Update"
+        android:text="Updates"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:cornerRadius="10dp" />
