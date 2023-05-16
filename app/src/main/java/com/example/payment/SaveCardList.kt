@@ -57,7 +57,7 @@ class SaveCardList : AppCompatActivity() {
         getPaymentData()
     }
 
-//
+
     private fun filterList(query: String?) {
         val filteredList = ArrayList<PaymentModel>()
         for (item in cardList) {
