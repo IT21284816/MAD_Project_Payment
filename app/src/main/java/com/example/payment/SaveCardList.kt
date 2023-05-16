@@ -54,7 +54,7 @@ class SaveCardList : AppCompatActivity() {
         })
 
 
-        getEmployeesData()
+        getPaymentData()
     }
 
 
@@ -87,7 +87,7 @@ class SaveCardList : AppCompatActivity() {
     }
 
 
-    private fun getEmployeesData() {
+    private fun getPaymentData() {
 
         cardRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE

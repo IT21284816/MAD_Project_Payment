@@ -22,7 +22,7 @@ class PayCardDetails : AppCompatActivity() {
     private lateinit var btnDelete: Button
     private lateinit var btnPay: Button
 
-
+//
     override fun onCreate(savedInstanceState: Bundle?) {
 
         //title hide
