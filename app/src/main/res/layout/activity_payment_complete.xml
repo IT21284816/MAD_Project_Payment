@@ -48,7 +48,7 @@
                 android:layout_height="60dp"
                 android:backgroundTint="#878A8A"
                 android:hint="@string/btnDone"
-                android:text="done"
+                android:text="don"
                 android:textSize="16sp"
                 app:cornerRadius="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
