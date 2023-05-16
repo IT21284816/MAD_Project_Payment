@@ -14,7 +14,7 @@ class PayAdapter(private val cardList: ArrayList<PaymentModel>) :
     interface onItemClickListener{
         fun onItemClick(position: Int)
     }
-//
+
     fun setOnItemClickListener(clickListener: onItemClickListener){
         mListener = clickListener
     }
